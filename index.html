@@ -37,7 +37,6 @@ button{font:inherit;color:inherit;cursor:pointer}
 h1,h2,h3{text-wrap:balance;margin:0}
 .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
 
-/* NAV */
 nav{position:sticky;top:0;z-index:20;background:rgba(15,13,20,.86);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 nav .wrap{display:flex;gap:18px;align-items:center;overflow-x:auto;white-space:nowrap;padding-top:12px;padding-bottom:12px;scrollbar-width:none}
 nav .wrap::-webkit-scrollbar{display:none}
@@ -45,7 +44,6 @@ nav .logo{font-family:var(--f-latin);font-weight:700;font-size:18px;letter-spaci
 nav a.l{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;color:var(--mute);text-decoration:none}
 nav a.l:hover{color:var(--paper)}
 
-/* HERO */
 .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
 #aether{position:absolute;inset:0;width:100%;height:100%}
 .hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:72px;padding-bottom:72px}
@@ -69,7 +67,6 @@ nav a.l:hover{color:var(--paper)}
 @keyframes spin{to{transform:rotate(360deg)}}
 @keyframes pulse{50%{box-shadow:0 0 110px rgba(198,168,242,.6),inset -18px -24px 50px rgba(15,13,20,.55)}}
 
-/* MARQUEE */
 .marquee{overflow:hidden;border-bottom:1px solid var(--line);background:var(--night)}
 .marquee .track{display:flex;width:max-content;animation:slide 32s linear infinite}
 .marquee span{font-family:var(--f-latin);font-style:italic;font-size:22px;padding:10px 0;white-space:nowrap;color:var(--mute)}
@@ -77,14 +74,12 @@ nav a.l:hover{color:var(--paper)}
 .marquee.rev .track{animation-direction:reverse}
 @keyframes slide{to{transform:translateX(-50%)}}
 
-/* SECTIONS */
 section.s{padding:88px 0;border-bottom:1px solid var(--line)}
 .s-head{display:flex;align-items:baseline;gap:16px;margin-bottom:36px;flex-wrap:wrap}
 .s-num{font-family:var(--f-mono);font-size:13px;color:var(--lapis);letter-spacing:.1em}
 .s-head h2{font-family:var(--f-latin);font-size:clamp(34px,5vw,52px);font-weight:700;letter-spacing:.02em;line-height:1}
 .s-head p{margin:0;color:var(--mute);font-size:15px;flex-basis:100%}
 
-/* PROFILE */
 .profiles{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .card{background:var(--night);border:1px solid var(--line);border-radius:14px;padding:28px}
 .card.wol{border-top:3px solid var(--lapis)}
@@ -98,7 +93,6 @@ dd{margin:0}
 .quote{margin-top:20px;padding-top:16px;border-top:1px dashed var(--line);font-family:var(--f-display);font-size:17px}
 .wol .quote{color:var(--lapis)} .ysh .quote{color:var(--aether)}
 
-/* TMI LEVER */
 .tmi{margin-top:24px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;background:var(--night);border:1px solid var(--line);border-radius:14px;padding:24px 28px}
 .lever{width:64px;height:120px;border:1px solid var(--line);border-radius:32px;background:var(--ink);position:relative}
 .lever .knob{position:absolute;left:50%;top:10px;width:40px;height:40px;margin-left:-20px;border-radius:50%;background:var(--lapis);transition:top .35s cubic-bezier(.5,1.6,.5,1)}
@@ -107,7 +101,6 @@ dd{margin:0}
 .tmi-text{font-family:var(--f-display);font-size:19px;min-height:3em}
 .tmi-text small{display:block;font-family:var(--f-mono);font-size:11px;letter-spacing:.16em;color:var(--lapis);margin-bottom:6px}
 
-/* LOCKED */
 .locked{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px;align-items:start}
 .lock-box{background:var(--night);border:1px solid var(--line);border-radius:14px;padding:28px}
 .lock-box label{display:block;font-size:14px;color:var(--mute);margin-bottom:8px}
@@ -125,7 +118,6 @@ dd{margin:0}
 .diary.sealed li p{filter:blur(6px);user-select:none}
 .diary.sealed li h4::after{content:"  🔒";font-size:12px}
 
-/* FRONT / BACK SLIDER */
 .cmp{position:relative;border:1px solid var(--line);border-radius:14px;overflow:hidden;user-select:none;touch-action:pan-y}
 .cmp-pane{padding:32px 28px 32px}
 .cmp-pane.back{background:var(--night)}
@@ -139,7 +131,6 @@ dd{margin:0}
 .cmp-handle span{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:40px;height:40px;border-radius:50%;background:var(--aether);color:var(--ink);display:grid;place-items:center;font-family:var(--f-mono);font-size:14px;font-weight:500}
 .cmp-cap{margin-top:12px;font-size:14px;color:var(--mute);text-align:center}
 
-/* HEIGHT */
 .height{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end}
 .figs{display:flex;align-items:flex-end;justify-content:center;gap:40px;height:360px;border-bottom:1px solid var(--line);position:relative}
 .slot{height:var(--h,200px);min-width:72px;display:flex;align-items:flex-end;justify-content:center;position:relative;z-index:1}
@@ -168,7 +159,6 @@ dd{margin:0}
 .chip{font-family:var(--f-mono);font-size:12px;border:1px solid var(--line);border-radius:999px;padding:6px 12px}
 .chip b{font-weight:500;color:var(--aether)}
 
-/* AETHER GAME */
 .game{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .game-box{background:var(--night);border:1px solid var(--line);border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:16px}
 .tease{font-family:var(--f-display);font-size:20px;min-height:3.2em;color:var(--aether)}
@@ -182,7 +172,6 @@ dd{margin:0}
 .result{font-size:15px;color:var(--mute)}
 .result strong{display:block;font-family:var(--f-display);font-size:22px;color:var(--paper);margin-bottom:6px}
 
-/* LINKPEARL PHONE */
 .phone-wrap{display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:center}
 .phone{width:300px;height:600px;border-radius:44px;border:10px solid #2a2438;background:#120f1a;position:relative;overflow:hidden}
 .phone .lock{position:absolute;inset:0;padding:60px 20px 20px;display:flex;flex-direction:column;align-items:center;background:radial-gradient(circle at 50% 20%,#3a2f6a,#120f1a 70%);transition:transform .5s,opacity .5s;cursor:pointer;border:0;width:100%;color:var(--paper)}
@@ -201,7 +190,6 @@ dd{margin:0}
 .phone-copy h3{font-family:var(--f-display);font-size:30px;font-weight:800;line-height:1.35;margin-bottom:12px}
 .phone-copy p{color:var(--mute);max-width:32em}
 
-/* ARCHIVE FLIP */
 .archive{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
 .flip{perspective:900px;height:260px;border:0;padding:0;background:none;text-align:left}
 .flip-in{position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d}
@@ -215,7 +203,6 @@ dd{margin:0}
 .face.b p{margin:0;font-size:14px;line-height:1.65}
 .face .tap{font-family:var(--f-mono);font-size:10px;letter-spacing:.2em;color:var(--mute);margin-top:12px}
 
-/* CHEER */
 .cheer{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px}
 .heart-box{background:var(--night);border:1px solid var(--line);border-radius:14px;padding:28px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px}
 .heart{width:120px;height:120px;border-radius:50%;border:1px solid var(--line);background:var(--ink);font-size:52px;line-height:1;transition:transform .12s}
@@ -231,14 +218,12 @@ dd{margin:0}
 @media (max-width:440px){.board form{flex-wrap:wrap}.board .name-in{flex:1 1 100%}}
 .notes li small{display:block;font-family:var(--f-mono);font-size:11px;color:var(--mute)}
 
-/* OUTRO */
 .outro{padding:110px 0 70px;text-align:center}
 .outro blockquote{margin:0 auto;max-width:18em;font-family:var(--f-display);font-size:clamp(26px,4.4vw,42px);font-weight:800;line-height:1.4}
 .outro cite{display:block;margin-top:18px;font-family:var(--f-latin);font-style:italic;font-size:20px;color:var(--aether)}
 footer{border-top:1px solid var(--line);padding:24px 0 40px;font-size:12px;color:var(--mute)}
 footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
-/* RESPONSIVE */
 @media (max-width:860px){
   .hero .wrap,.profiles,.locked,.height,.game,.phone-wrap,.cheer{grid-template-columns:1fr}
   .archive{grid-template-columns:repeat(2,1fr)}
@@ -296,7 +281,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   <span>PISTOLA <b>✦</b> Allin tuta. <b>✦</b> "...좋은 아침, Kitty." <b>✦</b> "좋은 아침이에요, Bunny." <b>✦</b> "후후." <b>✦</b> PISTOLA <b>✦</b> Allin tuta. <b>✦</b> "...좋은 아침, Kitty." <b>✦</b> "좋은 아침이에요, Bunny." <b>✦</b> "후후." <b>✦</b>&nbsp;</span>
 </div></div>
 
-<!-- 01 PROFILE -->
 <section class="s" id="profile">
   <div class="wrap">
     <div class="s-head"><span class="s-num">01</span><h2>Profile</h2><p>난 '새벽'의 마녀잖아요?</p></div>
@@ -333,10 +317,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
     <div class="tmi">
       <div>
-        <button class="lever" id="lever" aria-label="레버 당겨서 TMI 보기"><span class="knob"></span></button>
+        <button class="lever" id="lever" aria-label="레버 당겨서 대사 보기"><span class="knob"></span></button>
         <div class="lever-cap">PULL</div>
       </div>
-      <div class="tmi-text" id="tmiText" aria-live="polite"><small>TMI 00</small>레버를 당기면 TMI를 확인 가능합니다.</div>
+      <div class="tmi-text" id="tmiText" aria-live="polite"><small>DIALOG 00</small>레버를 당기면 DIALOG를 확인 가능합니다.</div>
     </div>
   </div>
 </section>
@@ -346,7 +330,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   <span>Lapis & Shtola <b>✦</b> 연하 <b>✦</b> 연상 <b>✦</b> "착해요." "...애 아니에요." <b>✦</b> Lapis & Shtola <b>✦</b> 연하 <b>✦</b> 연상 <b>✦</b> "착해요." "...애 아니에요." <b>✦</b>&nbsp;</span>
 </div></div>
 
-<!-- 02 DIARY -->
 <section class="s" id="diary">
   <div class="wrap">
     <div class="s-head"><span class="s-num">02</span><h2>Locked Diary</h2><p>슈톨라가 절대 안 보여주는 일기장. 비밀번호를 맞히면 열린다.</p></div>
@@ -372,7 +355,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   </div>
 </section>
 
-<!-- 03 FRONT/BACK -->
 <section class="s" id="front">
   <div class="wrap">
     <div class="s-head"><span class="s-num">03</span><h2>Front / Back</h2><p>가운데 손잡이를 끌어 보세요. 남들 앞의 슈톨라와 라피스 앞의 슈톨라.</p></div>
@@ -405,7 +387,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   </div>
 </section>
 
-<!-- 04 HEIGHT -->
 <section class="s" id="height">
   <div class="wrap">
     <div class="s-head"><span class="s-num">04</span><h2>Height Gap</h2><p>왜 그렇게 작아요? ...조용히 해요.</p></div>
@@ -435,7 +416,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   </div>
 </section>
 
-<!-- 05 LINKPEARL -->
 <section class="s" id="linkpearl">
   <div class="wrap">
     <div class="s-head"><span class="s-num">05</span><h2>Linkpearl</h2><p>링크펄 대화 기록. 화면을 눌러 잠금해제.</p></div>
@@ -477,7 +457,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   </div>
 </section>
 
-<!-- 06 ARCHIVE -->
 <section class="s" id="archive">
   <div class="wrap">
     <div class="s-head"><span class="s-num">06</span><h2>Archive</h2><p>카드를 눌러 뒤집어보세요.</p></div>
@@ -506,7 +485,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   </div>
 </section>
 
-<!-- 07 CHEER -->
 <section class="s" id="cheer">
   <div class="wrap">
     <div class="s-head"><span class="s-num">07</span><h2>Cheer</h2><p>하트를 누르고 한마디 남기기. 남긴 한마디는 방문한 모두에게 보여요.</p></div>
@@ -546,13 +524,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 <script>
 const CONFIG = {
   wolName: "라피스",
-  // 키 재기 사진: 배경 지운 PNG를 img 폴더에 올리면 자동으로 들어감. 없으면 실루엣이 나옴
+
   lapisImg: "img/lapis.png",
   yshImg: "img/yshtola.png",
-  // 화면에 서는 키(px). 사진을 넣고 비율이 어색하면 이 숫자를 조절
+
   lapisHeight: 270,
   yshHeight: 185,
-  // 공유 응원 메시지 (Supabase). 비워 두면 각자 브라우저에만 저장됨
+
   SUPABASE_URL: "https://qsrkhoncroyxvqygwrpq.supabase.co",
   SUPABASE_KEY: "sb_publishable_vhrXGrtKYbh2_6XyKWuC8w_iQrZTG0V"
 };
@@ -564,7 +542,6 @@ const store = {
   set(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
 };
 
-/* ===== 에테르 파티클 ===== */
 (function(){
   const c = document.getElementById("aether"), x = c.getContext("2d");
   let w, h, ps = [];
@@ -591,7 +568,6 @@ const store = {
   size(); draw(); addEventListener("resize", size);
 })();
 
-/* ===== 오브 ===== */
 const orbLines = [
   "진짜가 더 좋아요.\n...장난치지 말아요.",
   "저도 줄곧 당신과\n같이 있고 싶었으니까요, 라피스.",
@@ -611,7 +587,6 @@ orb.addEventListener("click", () => {
   typing = setInterval(() => { orbLine.textContent = t.slice(0, ++i); if(i >= t.length) clearInterval(typing); }, 45);
 });
 
-/* ===== TMI 레버 ===== */
 const tmis = [
   "...가끔, 망쳐달라고 했었나요. ...실은, 꽤 자주 그래요.",
   "그런게 운명 아니던가요.<br>...아니면, 모든 논리에 증명이 필요한 탐구자가 허상의 존재인 운명을 운운한다는 게 못 미더운가요?",
@@ -627,13 +602,12 @@ const lever = document.getElementById("lever"), tmiText = document.getElementByI
 lever.addEventListener("click", () => {
   lever.classList.add("down");
   const n = tmiI % tmis.length;
-  tmiText.innerHTML = `<small>TMI ${String(n+1).padStart(2,"0")}</small>${tmis[n]}`;
+  tmiText.innerHTML = `<small>DIALOG ${String(n+1).padStart(2,"0")}</small>${tmis[n]}`;
   tmiI++;
   setTimeout(() => lever.classList.remove("down"), 450);
 });
 
-/* ===== 잠긴 일기 ===== */
-const ANSWER = "1225";
+const ANSWER = "1224";
 const lockForm = document.getElementById("lockForm"), lockMsg = document.getElementById("lockMsg"), diary = document.getElementById("diaryList");
 lockForm.addEventListener("submit", e => {
   e.preventDefault();
@@ -651,7 +625,6 @@ document.getElementById("hintBtn").addEventListener("click", () => {
   const h = document.getElementById("hint"); h.hidden = !h.hidden;
 });
 
-/* ===== 비교 슬라이더 ===== */
 (function(){
   const box = document.getElementById("cmp"), front = document.getElementById("cmpFront"), handle = document.getElementById("cmpHandle");
   let pos = 50, drag = false;
@@ -673,7 +646,6 @@ document.getElementById("hintBtn").addEventListener("click", () => {
   set(50);
 })();
 
-/* ===== 키 재기 사진 ===== */
 (function(){
   const figs = document.getElementById("figs"), gap = document.getElementById("gapLine");
   figs.style.height = Math.max(300, CONFIG.lapisHeight + 80) + "px";
@@ -693,17 +665,14 @@ document.getElementById("hintBtn").addEventListener("click", () => {
   slot("slotYsh", CONFIG.yshImg, CONFIG.yshHeight, "upYsh");
 })();
 
-/* ===== 링크펄 폰 ===== */
 (function(){
   const now = new Date();
   document.getElementById("phoneTime").textContent = `${now.getHours()}:${String(now.getMinutes()).padStart(2,"0")}`;
   document.getElementById("lockScreen").addEventListener("click", () => document.getElementById("phone").classList.add("open"));
 })();
 
-/* ===== 아카이브 플립 ===== */
 document.querySelectorAll(".flip").forEach(b => b.addEventListener("click", () => b.classList.toggle("on")));
 
-/* ===== 응원 ===== */
 (function(){
   const btn = document.getElementById("heartBtn"), cnt = document.getElementById("heartCount"), msg = document.getElementById("heartMsg");
   let n = store.get("st-hearts", 0);
@@ -712,14 +681,13 @@ document.querySelectorAll(".flip").forEach(b => b.addEventListener("click", () =
   btn.addEventListener("click", () => { n++; store.set("st-hearts", n); show(); });
   show();
 
-  /* --- 응원 메시지: Supabase가 설정돼 있으면 모두에게 공유, 아니면 이 브라우저에만 --- */
   const list = document.getElementById("notes"), form = document.getElementById("noteForm"),
         input = document.getElementById("noteIn"), nameIn = document.getElementById("nameIn"),
         status = document.getElementById("noteStatus");
   const shared = !!(CONFIG.SUPABASE_URL && CONFIG.SUPABASE_KEY);
   const API = CONFIG.SUPABASE_URL.replace(/\/$/, "") + "/rest/v1/cheers";
   const HEAD = { apikey: CONFIG.SUPABASE_KEY, "Content-Type": "application/json" };
-  const COOLDOWN = 30; // 초. 같은 사람이 연달아 도배하지 못하게
+  const COOLDOWN = 30;
 
   nameIn.value = store.get("st-name", "");
 
