@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PISTOLA 라피스×슈톨라</title>
+<meta name="description" content="어머, 제가 모를 줄 알았나요? PISTOLA Lapis × Y'shtola Fan Page">
+<meta property="og:title" content="PISTOLA — Lapis × Y'shtola">
+<meta property="og:description" content="어머, 제가 모를 줄 알았나요?">
+<meta name="theme-color" content="#0f0d14">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;700&family=Nanum+Myeongjo:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0f0d14;
+  --night:#1a1624;
+  --line:#2e2840;
+  --paper:#eee8f6;
+  --mute:#9d95b0;
+  --aether:#c6a8f2;
+  --lapis:#4d8bff;
+  --jade:#5bb58f;
+  --f-display:"Nanum Myeongjo","Noto Serif KR",serif;
+  --f-latin:"Cormorant Garamond","Times New Roman",serif;
+  --f-body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--paper);font-family:var(--f-body);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+img{max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--aether);outline-offset:3px}
+h1,h2,h3{text-wrap:balance;margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:20;background:rgba(15,13,20,.86);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:18px;align-items:center;overflow-x:auto;white-space:nowrap;padding-top:12px;padding-bottom:12px;scrollbar-width:none}
+nav .wrap::-webkit-scrollbar{display:none}
+nav .logo{font-family:var(--f-latin);font-weight:700;font-size:18px;letter-spacing:.08em;color:var(--aether);text-decoration:none;margin-right:6px}
+nav a.l{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;color:var(--mute);text-decoration:none}
+nav a.l:hover{color:var(--paper)}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+#aether{position:absolute;inset:0;width:100%;height:100%}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:72px;padding-bottom:72px}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.2em;color:var(--mute);text-transform:uppercase}
+.hero h1{font-family:var(--f-latin);font-weight:700;font-size:clamp(60px,11vw,128px);line-height:.95;letter-spacing:.01em;margin:14px 0 18px}
+.hero h1 .pis{color:var(--lapis)}
+.hero h1 em{font-style:italic;color:var(--aether);font-weight:500}
+.hero .ko{font-family:var(--f-display);font-size:clamp(20px,3vw,28px);font-weight:800}
+.hero .pair{margin-top:18px;color:var(--mute);font-size:15px}
+.hero .pair b{color:var(--lapis);font-weight:500}
+.hero .pair i{font-style:normal;color:var(--aether)}
+.orb-box{display:flex;flex-direction:column;align-items:center;gap:16px}
+.orb{width:min(280px,64vw);aspect-ratio:1;border-radius:50%;border:0;padding:0;position:relative;
+  background:radial-gradient(circle at 34% 30%,#fff 0 3%,#e6dcff 8%,var(--aether) 28%,var(--lapis) 60%,#14204d 100%);
+  box-shadow:0 0 60px rgba(198,168,242,.35),inset -18px -24px 50px rgba(15,13,20,.55);transition:transform .4s}
+.orb::after{content:"";position:absolute;inset:-14px;border-radius:50%;border:1px dashed rgba(198,168,242,.45);animation:spin 26s linear infinite}
+.orb.on{animation:pulse 1.6s ease-in-out infinite}
+.orb:hover{transform:scale(1.03)}
+.orb-label{font-family:var(--f-mono);font-size:12px;letter-spacing:.24em;color:var(--aether)}
+.orb-line{min-height:3.4em;text-align:center;font-family:var(--f-display);font-size:18px;max-width:300px;white-space:pre-line}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes pulse{50%{box-shadow:0 0 110px rgba(198,168,242,.6),inset -18px -24px 50px rgba(15,13,20,.55)}}
+
+/* MARQUEE */
+.marquee{overflow:hidden;border-bottom:1px solid var(--line);background:var(--night)}
+.marquee .track{display:flex;width:max-content;animation:slide 32s linear infinite}
+.marquee span{font-family:var(--f-latin);font-style:italic;font-size:22px;padding:10px 0;white-space:nowrap;color:var(--mute)}
+.marquee span b{color:var(--lapis);font-style:normal;font-weight:500;margin:0 18px}
+.marquee.rev .track{animation-direction:reverse}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* SECTIONS */
+section.s{padding:88px 0;border-bottom:1px solid var(--line)}
+.s-head{display:flex;align-items:baseline;gap:16px;margin-bottom:36px;flex-wrap:wrap}
+.s-num{font-family:var(--f-mono);font-size:13px;color:var(--lapis);letter-spacing:.1em}
+.s-head h2{font-family:var(--f-latin);font-size:clamp(34px,5vw,52px);font-weight:700;letter-spacing:.02em;line-height:1}
+.s-head p{margin:0;color:var(--mute);font-size:15px;flex-basis:100%}
+
+/* PROFILE */
+.profiles{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.card{background:var(--night);border:1px solid var(--line);border-radius:14px;padding:28px}
+.card.wol{border-top:3px solid var(--lapis)}
+.card.ysh{border-top:3px solid var(--aether)}
+.card .role{font-family:var(--f-mono);font-size:11px;letter-spacing:.2em;color:var(--mute)}
+.card h3{font-family:var(--f-display);font-size:28px;font-weight:800;margin:6px 0 2px}
+.card .en{font-family:var(--f-latin);font-style:italic;color:var(--mute);font-size:18px}
+dl{display:grid;grid-template-columns:5.5em 1fr;gap:8px 14px;margin:20px 0 0;font-size:15px}
+dt{color:var(--mute);font-size:13px;padding-top:2px}
+dd{margin:0}
+.quote{margin-top:20px;padding-top:16px;border-top:1px dashed var(--line);font-family:var(--f-display);font-size:17px}
+.wol .quote{color:var(--lapis)} .ysh .quote{color:var(--aether)}
+
+/* TMI LEVER */
+.tmi{margin-top:24px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;background:var(--night);border:1px solid var(--line);border-radius:14px;padding:24px 28px}
+.lever{width:64px;height:120px;border:1px solid var(--line);border-radius:32px;background:var(--ink);position:relative}
+.lever .knob{position:absolute;left:50%;top:10px;width:40px;height:40px;margin-left:-20px;border-radius:50%;background:var(--lapis);transition:top .35s cubic-bezier(.5,1.6,.5,1)}
+.lever.down .knob{top:68px}
+.lever-cap{font-family:var(--f-mono);font-size:11px;letter-spacing:.2em;color:var(--mute);text-align:center;margin-top:6px}
+.tmi-text{font-family:var(--f-display);font-size:19px;min-height:3em}
+.tmi-text small{display:block;font-family:var(--f-mono);font-size:11px;letter-spacing:.16em;color:var(--lapis);margin-bottom:6px}
+
+/* LOCKED */
+.locked{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px;align-items:start}
+.lock-box{background:var(--night);border:1px solid var(--line);border-radius:14px;padding:28px}
+.lock-box label{display:block;font-size:14px;color:var(--mute);margin-bottom:8px}
+.lock-row{display:flex;gap:8px}
+.lock-row input{flex:1;min-width:0;background:var(--ink);border:1px solid var(--line);border-radius:8px;padding:10px 12px;color:var(--paper);font:inherit}
+.btn{background:var(--paper);color:var(--ink);border:0;border-radius:8px;padding:10px 16px;font-weight:700;font-size:14px}
+.btn.ghost{background:transparent;color:var(--mute);border:1px solid var(--line);font-weight:500}
+.lock-msg{min-height:1.7em;margin-top:10px;font-size:14px;color:var(--lapis)}
+.hint{margin-top:10px;font-size:14px;color:var(--mute)}
+.diary{list-style:none;margin:0;padding:0;display:grid;gap:12px;counter-reset:d}
+.diary li{background:var(--night);border:1px solid var(--line);border-radius:12px;padding:18px 20px;display:grid;grid-template-columns:auto 1fr;gap:16px;counter-increment:d}
+.diary li::before{content:counter(d,decimal-leading-zero);font-family:var(--f-mono);font-size:12px;color:var(--lapis);padding-top:4px}
+.diary h4{margin:0 0 4px;font-size:16px}
+.diary p{margin:0;color:var(--mute);font-size:15px}
+.diary.sealed li p{filter:blur(6px);user-select:none}
+.diary.sealed li h4::after{content:"  🔒";font-size:12px}
+
+/* FRONT / BACK SLIDER */
+.cmp{position:relative;border:1px solid var(--line);border-radius:14px;overflow:hidden;user-select:none;touch-action:pan-y}
+.cmp-pane{padding:32px 28px 32px}
+.cmp-pane.back{background:var(--night)}
+.cmp-pane.front{position:absolute;inset:0;background:#221c33;clip-path:inset(0 50% 0 0)}
+.cmp-pane h3{font-family:var(--f-mono);font-size:12px;letter-spacing:.2em;font-weight:500;margin-bottom:18px}
+.front h3{color:var(--mute)} .back h3{color:var(--aether);text-align:right}
+.cmp-rows{display:grid;grid-template-columns:7em 1fr;gap:12px 18px;font-size:15px}
+.cmp-rows dt{color:var(--mute)}
+.back .cmp-rows dd{color:var(--paper)}
+.cmp-handle{position:absolute;top:0;bottom:0;left:50%;width:2px;margin-left:-1px;background:var(--aether);cursor:ew-resize}
+.cmp-handle span{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:40px;height:40px;border-radius:50%;background:var(--aether);color:var(--ink);display:grid;place-items:center;font-family:var(--f-mono);font-size:14px;font-weight:500}
+.cmp-cap{margin-top:12px;font-size:14px;color:var(--mute);text-align:center}
+
+/* HEIGHT */
+.height{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end}
+.figs{display:flex;align-items:flex-end;justify-content:center;gap:40px;height:360px;border-bottom:1px solid var(--line);position:relative}
+.slot{height:var(--h,200px);min-width:72px;display:flex;align-items:flex-end;justify-content:center;position:relative;z-index:1}
+.slot img{height:100%;width:auto;max-width:220px;object-fit:contain;object-position:bottom;display:block}
+.slot.has-img .fig{display:none}
+.slot img[hidden]{display:none}
+.chip b.l{color:var(--lapis)}
+.uploads{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;justify-content:center}
+.up{position:relative;border:1px solid var(--line);border-radius:8px;padding:8px 14px;font-size:14px;color:var(--mute);cursor:pointer}
+.up:hover{color:var(--paper)}
+.up:focus-within{outline:2px solid var(--aether);outline-offset:3px}
+.up input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%}
+.up-note{flex-basis:100%;text-align:center;font-size:13px;color:var(--mute);margin:4px 0 0}
+.fig{width:72px;border-radius:36px 36px 8px 8px;position:relative;display:flex;align-items:flex-end;justify-content:center;padding-bottom:12px;font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;color:var(--ink)}
+.fig.w{height:100%;background:var(--lapis)}
+.fig.y{height:100%;background:var(--aether)}
+.fig.w::before,.fig.w::after{content:"";position:absolute;bottom:100%;width:16px;height:62px;border-radius:12px 12px 4px 4px;background:var(--lapis)}
+.fig.w::before{left:14px;transform:rotate(-6deg)} .fig.w::after{right:14px;transform:rotate(8deg)}
+.fig.y::before,.fig.y::after{content:"";position:absolute;bottom:calc(100% - 6px);width:0;height:0;border-left:13px solid transparent;border-right:13px solid transparent;border-bottom:26px solid var(--aether)}
+.fig.y::before{left:6px} .fig.y::after{right:6px}
+.gap-line{position:absolute;left:50%;transform:translateX(-50%);bottom:185px;z-index:2;width:200px;border-top:1px dashed var(--mute)}
+.gap-line span{position:absolute;right:-6px;top:-24px;font-family:var(--f-mono);font-size:11px;color:var(--mute)}
+.height-copy h3{font-family:var(--f-display);font-size:clamp(24px,3.4vw,34px);font-weight:800;line-height:1.35}
+.height-copy p{color:var(--mute);max-width:36em}
+.score{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.chip{font-family:var(--f-mono);font-size:12px;border:1px solid var(--line);border-radius:999px;padding:6px 12px}
+.chip b{font-weight:500;color:var(--aether)}
+
+/* AETHER GAME */
+.game{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.game-box{background:var(--night);border:1px solid var(--line);border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:16px}
+.tease{font-family:var(--f-display);font-size:20px;min-height:3.2em;color:var(--aether)}
+.meter{height:14px;border-radius:7px;background:var(--ink);border:1px solid var(--line);overflow:hidden}
+.meter i{display:block;height:100%;width:100%;background:linear-gradient(90deg,var(--lapis),var(--aether));transition:width .15s}
+.meter-cap{display:flex;justify-content:space-between;font-family:var(--f-mono);font-size:12px;color:var(--mute);font-variant-numeric:tabular-nums}
+.ears{font-family:var(--f-mono);font-size:13px;color:var(--mute)}
+.ears b{color:var(--lapis);font-weight:500}
+.hold{width:100%;padding:18px;border-radius:12px;border:1px solid var(--lapis);background:transparent;color:var(--lapis);font-weight:700;font-size:16px}
+.hold:active{background:var(--lapis);color:var(--ink)}
+.result{font-size:15px;color:var(--mute)}
+.result strong{display:block;font-family:var(--f-display);font-size:22px;color:var(--paper);margin-bottom:6px}
+
+/* LINKPEARL PHONE */
+.phone-wrap{display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:center}
+.phone{width:300px;height:600px;border-radius:44px;border:10px solid #2a2438;background:#120f1a;position:relative;overflow:hidden}
+.phone .lock{position:absolute;inset:0;padding:60px 20px 20px;display:flex;flex-direction:column;align-items:center;background:radial-gradient(circle at 50% 20%,#3a2f6a,#120f1a 70%);transition:transform .5s,opacity .5s;cursor:pointer;border:0;width:100%;color:var(--paper)}
+.phone.open .lock{transform:translateY(-100%);opacity:0;pointer-events:none}
+.lock .time{font-family:var(--f-latin);font-size:72px;font-weight:500;line-height:1}
+.lock .date{font-size:13px;color:var(--mute);margin-bottom:28px}
+.noti{width:100%;background:rgba(255,255,255,.08);border-radius:14px;padding:10px 12px;text-align:left;font-size:13px;margin-bottom:8px}
+.noti b{display:block;font-size:11px;color:var(--aether);font-weight:500;letter-spacing:.06em}
+.lock .swipe{margin-top:auto;font-family:var(--f-mono);font-size:11px;letter-spacing:.2em;color:var(--mute)}
+.chat{position:absolute;inset:0;padding:22px 14px 14px;display:flex;flex-direction:column;gap:8px;overflow-y:auto}
+.chat .top{text-align:center;font-size:12px;color:var(--mute);padding-bottom:8px;border-bottom:1px solid var(--line);margin-bottom:4px}
+.msg{max-width:78%;padding:8px 12px;border-radius:14px;font-size:14px;line-height:1.5}
+.msg.y{background:#2c2550;align-self:flex-start;border-bottom-left-radius:4px}
+.msg.w{background:var(--lapis);color:var(--ink);align-self:flex-end;border-bottom-right-radius:4px}
+.msg.sys{align-self:center;background:none;color:var(--mute);font-size:11px;font-family:var(--f-mono)}
+.phone-copy h3{font-family:var(--f-display);font-size:30px;font-weight:800;line-height:1.35;margin-bottom:12px}
+.phone-copy p{color:var(--mute);max-width:32em}
+
+/* ARCHIVE FLIP */
+.archive{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.flip{perspective:900px;height:260px;border:0;padding:0;background:none;text-align:left}
+.flip-in{position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d}
+.flip.on .flip-in{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;border-radius:12px;border:1px solid var(--line);padding:18px;backface-visibility:hidden;-webkit-backface-visibility:hidden;display:flex;flex-direction:column}
+.face.f{background:var(--night)}
+.face.b{background:#241d38;transform:rotateY(180deg)}
+.face .no{font-family:var(--f-mono);font-size:11px;color:var(--lapis);letter-spacing:.12em}
+.face h4{font-family:var(--f-display);font-size:20px;margin:auto 0 4px;line-height:1.3}
+.face .where{font-size:13px;color:var(--mute)}
+.face.b p{margin:0;font-size:14px;line-height:1.65}
+.face .tap{font-family:var(--f-mono);font-size:10px;letter-spacing:.2em;color:var(--mute);margin-top:12px}
+
+/* CHEER */
+.cheer{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px}
+.heart-box{background:var(--night);border:1px solid var(--line);border-radius:14px;padding:28px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px}
+.heart{width:120px;height:120px;border-radius:50%;border:1px solid var(--line);background:var(--ink);font-size:52px;line-height:1;transition:transform .12s}
+.heart:active{transform:scale(.9)}
+.count{font-family:var(--f-latin);font-size:56px;font-weight:700;line-height:1;font-variant-numeric:tabular-nums;color:var(--lapis)}
+.board{display:flex;flex-direction:column;gap:12px}
+.board form{display:flex;gap:8px}
+.board input{flex:1;min-width:0;background:var(--night);border:1px solid var(--line);border-radius:8px;padding:10px 12px;color:var(--paper);font:inherit}
+.notes{list-style:none;margin:0;padding:0;display:grid;gap:8px;max-height:300px;overflow-y:auto}
+.notes li{background:var(--night);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:15px}
+.board .name-in{flex:0 0 7.5em}
+.note-status{min-height:1.4em;font-size:13px;color:var(--mute)}
+@media (max-width:440px){.board form{flex-wrap:wrap}.board .name-in{flex:1 1 100%}}
+.notes li small{display:block;font-family:var(--f-mono);font-size:11px;color:var(--mute)}
+
+/* OUTRO */
+.outro{padding:110px 0 70px;text-align:center}
+.outro blockquote{margin:0 auto;max-width:18em;font-family:var(--f-display);font-size:clamp(26px,4.4vw,42px);font-weight:800;line-height:1.4}
+.outro cite{display:block;margin-top:18px;font-family:var(--f-latin);font-style:italic;font-size:20px;color:var(--aether)}
+footer{border-top:1px solid var(--line);padding:24px 0 40px;font-size:12px;color:var(--mute)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* RESPONSIVE */
+@media (max-width:860px){
+  .hero .wrap,.profiles,.locked,.height,.game,.phone-wrap,.cheer{grid-template-columns:1fr}
+  .archive{grid-template-columns:repeat(2,1fr)}
+  .phone{margin:0 auto}
+  .hero .wrap{padding-top:48px;padding-bottom:56px}
+  section.s{padding:64px 0}
+}
+@media (max-width:440px){
+  .archive{grid-template-columns:1fr}
+  .flip{height:220px}
+  .tmi{grid-template-columns:1fr;justify-items:center;text-align:center}
+  .cmp-rows{grid-template-columns:5.5em 1fr}
+  .phone{width:270px;height:540px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<nav aria-label="섹션 이동">
+  <div class="wrap">
+    <a class="logo" href="#top">PISTOLA</a>
+    <a class="l" href="#profile">PROFILE</a>
+    <a class="l" href="#diary">DIARY</a>
+    <a class="l" href="#front">FRONT/BACK</a>
+    <a class="l" href="#height">HEIGHT</a>
+    <a class="l" href="#linkpearl">LINKPEARL</a>
+    <a class="l" href="#archive">ARCHIVE</a>
+    <a class="l" href="#cheer">CHEER</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <canvas id="aether" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Lapis × Y'shtola · coupling fan page</div>
+      <h1><span class="pis">Pis</span><em>tola</em></h1>
+      <div class="ko">어머, 제가 모를 줄 알았나요?</div>
+      <p class="pair"><b><span class="wol-name"> Lapis </span></b> 라바 비에라 · 이슈가르드 · 연하 · 표정 관리 중<br><i>슈톨라</i> 태양의 추종자 미코테 · 연상 · 표정 읽는 중</p>
+    </div>
+    <div class="orb-box">
+      <button class="orb" id="orb" aria-label="에테르 수정 만지기"></button>
+      <div class="orb-label">TOUCH THE AETHER</div>
+      <div class="orb-line" id="orbLine" aria-live="polite">에테르 확인하기</div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true"><div class="track">
+  <span>PISTOLA <b>✦</b> Allin tuta. <b>✦</b> "...좋은 아침, Kitty." <b>✦</b> "좋은 아침이에요, Bunny." <b>✦</b> "후후." <b>✦</b> PISTOLA <b>✦</b> Allin tuta. <b>✦</b> "...좋은 아침, Kitty." <b>✦</b> "좋은 아침이에요, Bunny." <b>✦</b> "후후." <b>✦</b>&nbsp;</span>
+  <span>PISTOLA <b>✦</b> Allin tuta. <b>✦</b> "...좋은 아침, Kitty." <b>✦</b> "좋은 아침이에요, Bunny." <b>✦</b> "후후." <b>✦</b> PISTOLA <b>✦</b> Allin tuta. <b>✦</b> "...좋은 아침, Kitty." <b>✦</b> "좋은 아침이에요, Bunny." <b>✦</b> "후후." <b>✦</b>&nbsp;</span>
+</div></div>
+
+<!-- 01 PROFILE -->
+<section class="s" id="profile">
+  <div class="wrap">
+    <div class="s-head"><span class="s-num">01</span><h2>Profile</h2><p>난 '새벽'의 마녀잖아요?</p></div>
+    <div class="profiles">
+      <article class="card wol">
+        <div class="role">Lapis lazuli · 연하</div>
+        <h3 class="wol-name">라피스 라줄리</h3>
+        <div class="en">Lapis · Rava Viera</div>
+        <dl>
+          <dt>종족</dt><dd>비에라 · 라바 부족</dd>
+          <dt>출신</dt><dd>이슈가르드</dd>
+          <dt>성격</dt><dd>유치한 토끼. ...그래도 영웅은 영웅이지.</dd>
+          <dt>말버릇</dt><dd>"…톨리." "저 바보 아니에요." "여보."</dd>
+          <dt>약점</dt><dd>...은근 수줍은 것 같기도 하고.</dd>
+          <dt>좋아하는 것</dt><dd>단 거, 이기는 것, 슈톨라</dd>
+        </dl>
+        <div class="quote">"당신 오늘... 아직 사랑한다는 말도 안 해줬어요."</div>
+      </article>
+      <article class="card ysh">
+        <div class="role">Y'SHTOLA RHUL · 연상</div>
+        <h3>야 슈톨라 룰</h3>
+        <div class="en">Miqo'te · Seeker of the Sun</div>
+        <dl>
+          <dt>종족</dt><dd>미코테 · 태양의 추종자</dd>
+          <dt>출신</dt><dd>올드 샬레이안</dd>
+          <dt>스승</dt><dd>마토야</dd>
+          <dt>성격</dt><dd>침착하고 말이 날카롭다. 놀릴 때는 다정한 편.</dd>
+          <dt>특기</dt><dd>후후, 제 눈에 숨길 수 있을 것 같나요.</dd>
+          <dt>요즘 취미</dt><dd>검정 토끼 속마음 맞추기</dd>
+        </dl>
+        <div class="quote">"라피스, 당신 속이 시끄러워요."</div>
+      </article>
+    </div>
+
+    <div class="tmi">
+      <div>
+        <button class="lever" id="lever" aria-label="레버 당겨서 TMI 보기"><span class="knob"></span></button>
+        <div class="lever-cap">PULL</div>
+      </div>
+      <div class="tmi-text" id="tmiText" aria-live="polite"><small>TMI 00</small>레버를 당기면 TMI를 확인 가능합니다.</div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee rev" aria-hidden="true"><div class="track">
+  <span>Lapis & Shtola <b>✦</b> 연하 <b>✦</b> 연상 <b>✦</b> "착해요." "...애 아니에요." <b>✦</b> Lapis & Shtola <b>✦</b> 연하 <b>✦</b> 연상 <b>✦</b> "착해요." "...애 아니에요." <b>✦</b>&nbsp;</span>
+  <span>Lapis & Shtola <b>✦</b> 연하 <b>✦</b> 연상 <b>✦</b> "착해요." "...애 아니에요." <b>✦</b> Lapis & Shtola <b>✦</b> 연하 <b>✦</b> 연상 <b>✦</b> "착해요." "...애 아니에요." <b>✦</b>&nbsp;</span>
+</div></div>
+
+<!-- 02 DIARY -->
+<section class="s" id="diary">
+  <div class="wrap">
+    <div class="s-head"><span class="s-num">02</span><h2>Locked Diary</h2><p>슈톨라가 절대 안 보여주는 일기장. 비밀번호를 맞히면 열린다.</p></div>
+    <div class="locked">
+      <form class="lock-box" id="lockForm">
+        <label for="pw">비밀번호 (숫자 4자리)</label>
+        <div class="lock-row">
+          <input id="pw" type="text" inputmode="numeric" maxlength="4" autocomplete="off" placeholder="····">
+          <button class="btn" type="submit">열기</button>
+        </div>
+        <div class="lock-msg" id="lockMsg" aria-live="polite"></div>
+        <button class="btn ghost" type="button" id="hintBtn">힌트 보기</button>
+        <div class="hint" id="hint" hidden>거짓말 같았던 언약식 날.</div>
+      </form>
+      <ol class="diary sealed" id="diaryList">
+        <li><div><h4>낯선 밤공기</h4><p>오늘따라 낯설게 느껴지네요. 적어내리는 글자들이 평소같지 않음이 그 까닭이겠죠.</p></div></li>
+        <li><div><h4>애칭</h4><p>톨리, 키티, 여보. ...어째 낯부끄러운 소리가 점점 하나씩 늘어나는군요.</p></div></li>
+        <li><div><h4>사탕</h4><p>...라피스가 좋아하는 맛으로 챙겨놔야겠군요.</p></div></li>
+        <li><div><h4>에테르</h4><p>...당신 속이 시끄러울 땐 에테르도 소란스럽게 보인다는 건 언제쯤 알아차릴까요.</p></div></li>
+        <li><div><h4>오늘은</h4><p>어쩐지 보고싶네요. 직접 말하면 금세 달라붙어 오겠지만..., 오늘은 여기에만 적어둘까봐요. 후후.</p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- 03 FRONT/BACK -->
+<section class="s" id="front">
+  <div class="wrap">
+    <div class="s-head"><span class="s-num">03</span><h2>Front / Back</h2><p>가운데 손잡이를 끌어 보세요. 남들 앞의 슈톨라와 라피스 앞의 슈톨라.</p></div>
+    <div class="cmp" id="cmp">
+      <div class="cmp-pane back">
+        <h3>라피스 앞</h3>
+        <dl class="cmp-rows">
+          <dt>표정</dt><dd>입에 걸린 미소</dd>
+          <dt>대답</dt><dd>"라피, 하고 싶은 말이라도 있나요?"</dd>
+          <dt>전투 중</dt><dd>한번씩 익숙한 에테르를 쫓는 눈</dd>
+          <dt>칭찬</dt><dd>짧은 입맞춤</dd>
+          <dt>귀</dt><dd>드물게 소란스러운 편</dd>
+          <dt>단 거</dt><dd>미리 챙겨두는 막대사탕</dd>
+        </dl>
+      </div>
+      <div class="cmp-pane front" id="cmpFront">
+        <h3>남들 앞</h3>
+        <dl class="cmp-rows">
+          <dt>표정</dt><dd>변화 없음</dd>
+          <dt>대답</dt><dd>"무슨 용건인가요?"</dd>
+          <dt>전투 중</dt><dd>앞을 향해 나아가는 걸음</dd>
+          <dt>칭찬</dt><dd>"오늘 컨디션 좋네요."</dd>
+          <dt>귀</dt><dd>고정</dd>
+          <dt>단 거</dt><dd>"별 생각 없네요. 선물은 고마워요."</dd>
+        </dl>
+      </div>
+      <div class="cmp-handle" id="cmpHandle" role="slider" tabindex="0" aria-label="비교 위치" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><span>⇆</span></div>
+    </div>
+    <div class="cmp-cap">키보드 ← → 로도 움직일 수 있어요.</div>
+  </div>
+</section>
+
+<!-- 04 HEIGHT -->
+<section class="s" id="height">
+  <div class="wrap">
+    <div class="s-head"><span class="s-num">04</span><h2>Height Gap</h2><p>왜 그렇게 작아요? ...조용히 해요.</p></div>
+    <div class="height">
+      <div class="fig-col">
+      <div class="figs" id="figs">
+        <div class="gap-line" id="gapLine"><span></span></div>
+        <div class="slot" id="slotLapis"><img alt="라피스" hidden><div class="fig w">LAPIS</div></div>
+        <div class="slot" id="slotYsh"><img alt="야 슈톨라" hidden><div class="fig y">Y'SHTOLA</div></div>
+      </div>
+      <div class="uploads">
+        <label class="up">라피스 사진 넣기<input type="file" accept="image/png,image/webp,image/*" id="upLapis"></label>
+        <label class="up">슈톨라 사진 넣기<input type="file" accept="image/png,image/webp,image/*" id="upYsh"></label>
+      </div>
+      </div>
+      <div class="height-copy">
+        <h3>최소키 비에라,<br>최대(에 가까운) 미코테</h3>
+        <p>슈톨라가 의아한 눈으로 올려다본다. 라피스의 시선이 아래로 기운다. 맞닿은 시선 사이에 정적이 머문다. 잔잔한 미소가 이미 눈앞의 검은 토끼의 속내는 다 읽어본 모양새였다.</p>
+        <div class="score">
+          <span class="chip">키 <b class="l">라피스 승</b></span>
+          <span class="chip">말싸움 <b>슈톨라 승</b></span>
+          <span class="chip">대련 <b>무승부?</b></span>
+          <span class="chip">감정 숨기기 <b>슈톨라 압승</b></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 LINKPEARL -->
+<section class="s" id="linkpearl">
+  <div class="wrap">
+    <div class="s-head"><span class="s-num">05</span><h2>Linkpearl</h2><p>링크펄 대화 기록. 화면을 눌러 잠금해제.</p></div>
+    <div class="phone-wrap">
+      <div class="phone" id="phone">
+        <div class="chat" aria-label="링크펄 대화">
+          <div class="top">✦ 슈톨라</div>
+          <div class="msg y">어디에요?</div>
+          <div class="msg w">밖이에요.</div>
+          <div class="msg y">...위치요.</div>
+          <div class="msg w">…툴라이욜라요.</div>
+          <div class="msg y">타코 세 개째인 거 알아요.</div>
+          <div class="msg w">...어떻게 알았어요?</div>
+          <div class="msg y">비밀이에요. 하나 남겨둬요.</div>
+          <div class="msg w">안 남겨둘건데요.</div>
+          <div class="msg sys">10분 후</div>
+          <div class="msg w">남겨뒀어요.</div>
+          <div class="msg y">착해요.</div>
+          <div class="msg w">...어린 애 아니에요.</div>
+          <div class="msg y">후후. 그런 것치곤 기분 좋아보여요.</div>
+          <div class="msg w">그걸 어떻게 알아요.</div>
+          <div class="msg y">기분 좋다는거죠?</div>
+          <div class="msg sys">링크펄 연결을 끊었습니다</div>
+        </div>
+        <button class="lock" id="lockScreen" aria-label="잠금 해제">
+          <div class="time" id="phoneTime">12:24</div>
+          <div class="date">링크펄 · 새 메시지</div>
+          <div class="noti"><b>슈톨라</b>어디에요?</div>
+          <div class="noti"><b>슈톨라</b>...위치요.</div>
+          <div class="noti"><b>슈톨라</b>타코 세 개째인 거 알아요.</div>
+          <div class="swipe">TAP TO UNLOCK</div>
+        </button>
+      </div>
+      <div class="phone-copy">
+        <h3>필요할 때만 오가는 연락,<br>늘 같은 온도의 연락.</h3>
+        <p>필요할 때만 울리는 링크펄. 대면으로 볼 수 있는 상황에는 찾아가는 쪽을 선택한다. 슈톨라가 대화의 승기를 잡으면, 종종 링크펄이 끊긴다. 분명 검은 토끼가 잔뜩 심통이라도 내고 있겠지만... 슈톨라는 모르는 척 웃어넘긴다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 ARCHIVE -->
+<section class="s" id="archive">
+  <div class="wrap">
+    <div class="s-head"><span class="s-num">06</span><h2>Archive</h2><p>카드를 눌러 뒤집어보세요.</p></div>
+    <div class="archive" id="archiveGrid">
+      <button class="flip"><div class="flip-in">
+        <div class="face f"><span class="no">SCENE 01</span><h4>첫 만남</h4><span class="where">림사 로민사</span><span class="tap">TAP TO FLIP</span></div>
+        <div class="face b"><span class="no">SCENE 01</span><p>"그건 당신이 지닐 물건이 아니에요."<br>"에테르의 흐름을 조사하는 박물학자, 야슈톨라에요."<br><br>지금보다 한참 어렸을 때. 라피스의 첫인상은 뭣모르는 어린 애.</p></div>
+      </div></button>
+      <button class="flip"><div class="flip-in">
+        <div class="face f"><span class="no">SCENE 02</span><h4>고향</h4><span class="where">이슈가르드</span><span class="tap">TAP TO FLIP</span></div>
+        <div class="face b"><span class="no">SCENE 02</span><p>라피스에게는 익숙한 풍경이었다. 슈톨라는 몇번 와보긴 했으나 여전히 적응되지 않는 추위라고 생각했다. 꼬리가 저절로 쭈뼛 선다. 라피스가 눈을 닮아 새하얀 꼬리를 바라본다. 콱 쥐고 싶다는 생각이 스친다.</p></div>
+      </div></button>
+      <button class="flip"><div class="flip-in">
+        <div class="face f"><span class="no">SCENE 03</span><h4>재회</h4><span class="where">제1세계</span><span class="tap">TAP TO FLIP</span></div>
+        <div class="face b"><span class="no">SCENE 03</span><p>"...당신이에요?"<br>새하얀 에테르가 눈에 들어온다. 죄식자들과 다름없는 형체. 슈톨라는 라피스의 목소리에 그대로 굳어버렸다. 많은 생각들이 순간 머리를 스쳤다.</p></div>
+      </div></button>
+      <button class="flip"><div class="flip-in">
+        <div class="face f"><span class="no">SCENE 04</span><h4>도서관</h4><span class="where">올드 샬레이안</span><span class="tap">TAP TO FLIP</span></div>
+        <div class="face b"><span class="no">SCENE 04</span><p>올드샬레이안의 도서관. 라피스는 30분 만에 잠에 든다. 눈을 떠보면, 슈톨라가 라피스에게 어깨를 내어준 채 열심히 책을 읽고 있다. 무릎에는 담요가 덮여있다.</p></div>
+      </div></button>
+      <button class="flip"><div class="flip-in">
+        <div class="face f"><span class="no">SCENE 05</span><h4>평범한 날</h4><span class="where">평범한 하루</span><span class="tap">TAP TO FLIP</span></div>
+        <div class="face b"><span class="no">SCENE 05</span><p>여느때와 다름없는 아침. 눈을 뜨면 익숙한 얼굴이 보인다. 곤히 잠든 앳된 얼굴을 빤히 내려다보다가 눈을 감는다. ...언제까지나, 영웅으로 남는다면. 슈톨라가 제 손을 거둔다. 스스로의 욕심도 거둔다.</p></div>
+      </div></button>
+    </div>
+  </div>
+</section>
+
+<!-- 07 CHEER -->
+<section class="s" id="cheer">
+  <div class="wrap">
+    <div class="s-head"><span class="s-num">07</span><h2>Cheer</h2><p>하트를 누르고 한마디 남기기. 남긴 한마디는 방문한 모두에게 보여요.</p></div>
+    <div class="cheer">
+      <div class="heart-box">
+        <button class="heart" id="heartBtn" aria-label="하트 누르기">♡</button>
+        <div class="count" id="heartCount">0</div>
+        <div class="eyebrow" id="heartMsg">Lapis to Shtola</div>
+      </div>
+      <div class="board">
+        <form id="noteForm">
+          <input id="nameIn" class="name-in" aria-label="닉네임" maxlength="12" placeholder="닉네임">
+          <input id="noteIn" aria-label="응원 메시지" maxlength="80" placeholder="둘에게 한마디 (80자)">
+          <button class="btn" type="submit">남기기</button>
+        </form>
+        <div class="note-status" id="noteStatus" aria-live="polite"></div>
+        <ul class="notes" id="notes"></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="outro">
+  <div class="wrap">
+    <blockquote>난 '새벽'의 마녀잖아요?<br>세계를 꿰뚫고, 지식을 양분 삼아<br>여러분의 힘이 될게요!</blockquote>
+    <cite>— Y'shtola</cite>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>PISTOLA · 비공식 팬 사이트 · 대사와 설정 일부는 팬 창작입니다.</span>
+    <span>FINAL FANTASY XIV © SQUARE ENIX</span>
+  </div>
+</footer>
+
+<script>
+const CONFIG = {
+  wolName: "라피스",
+  // 키 재기 사진: 배경 지운 PNG를 img 폴더에 올리면 자동으로 들어감. 없으면 실루엣이 나옴
+  lapisImg: "img/lapis.png",
+  yshImg: "img/yshtola.png",
+  // 화면에 서는 키(px). 사진을 넣고 비율이 어색하면 이 숫자를 조절
+  lapisHeight: 270,
+  yshHeight: 185,
+  // 공유 응원 메시지 (Supabase). 비워 두면 각자 브라우저에만 저장됨
+  SUPABASE_URL: "https://qsrkhoncroyxvqygwrpq.supabase.co",
+  SUPABASE_KEY: "sb_publishable_vhrXGrtKYbh2_6XyKWuC8w_iQrZTG0V"
+};
+document.querySelectorAll(".wol-name").forEach(el => el.textContent = CONFIG.wolName);
+
+const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const store = {
+  get(k, d){ try{ const v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } },
+  set(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+};
+
+/* ===== 에테르 파티클 ===== */
+(function(){
+  const c = document.getElementById("aether"), x = c.getContext("2d");
+  let w, h, ps = [];
+  function size(){
+    const r = c.getBoundingClientRect(), d = window.devicePixelRatio || 1;
+    w = r.width; h = r.height; c.width = w*d; c.height = h*d; x.setTransform(d,0,0,d,0,0);
+    ps = Array.from({length: Math.round(w*h/9000)}, () => ({
+      x: Math.random()*w, y: Math.random()*h, r: Math.random()*1.8+.4,
+      v: Math.random()*.35+.1, a: Math.random()*Math.PI*2,
+      col: Math.random() < .55 ? "198,168,242" : "77,139,255"
+    }));
+  }
+  function draw(){
+    x.clearRect(0,0,w,h);
+    for(const p of ps){
+      p.y -= p.v; p.a += .01; p.x += Math.sin(p.a)*.25;
+      if(p.y < -5){ p.y = h+5; p.x = Math.random()*w; }
+      const o = .25 + .35*Math.abs(Math.sin(p.a));
+      x.beginPath(); x.arc(p.x,p.y,p.r,0,Math.PI*2);
+      x.fillStyle = `rgba(${p.col},${o})`; x.fill();
+    }
+    if(!reduce) requestAnimationFrame(draw);
+  }
+  size(); draw(); addEventListener("resize", size);
+})();
+
+/* ===== 오브 ===== */
+const orbLines = [
+  "진짜가 더 좋아요.\n...장난치지 말아요.",
+  "저도 줄곧 당신과\n같이 있고 싶었으니까요, 라피스.",
+  "우리 사이에 \'같이\'라는 건...\n더이상 약속이 불필요한 말이라는 거\n알고 있잖아요.",
+  "원래 울린 사람이\n평생 책임지는 거라고들 하던데.",
+  "제가 당신 나이쯤일 때면 당신은,\n…아니에요, 라피스."
+];
+let orbI = 0;
+const orb = document.getElementById("orb"), orbLine = document.getElementById("orbLine");
+let typing;
+orb.addEventListener("click", () => {
+  orb.classList.add("on");
+  const t = orbLines[orbI++ % orbLines.length];
+  clearInterval(typing);
+  if(reduce){ orbLine.textContent = t; return; }
+  let i = 0; orbLine.textContent = "";
+  typing = setInterval(() => { orbLine.textContent = t.slice(0, ++i); if(i >= t.length) clearInterval(typing); }, 45);
+});
+
+/* ===== TMI 레버 ===== */
+const tmis = [
+  "...가끔, 망쳐달라고 했었나요. ...실은, 꽤 자주 그래요.",
+  "그런게 운명 아니던가요.<br>...아니면, 모든 논리에 증명이 필요한 탐구자가 허상의 존재인 운명을 운운한다는 게 못 미더운가요?",
+  "당신과의 거리를 재는 것은 포기한다. ...단 것은 그다지 좋아하지 않는다고 생각했는데.",
+  "본인이 먼저 시작해놓고 이제와서 삐딱하게 구는 건.<br>...다소 얄밉긴 했으나 그것이 당신의 애정이라는 것을 모를 나이도 아니다.",
+  "...감히 평생을 바라고, 주제넘게도 영원을 기약한다.<br>모든 것은 우리가 운명에 맞서는 이들이기 때문일까.",
+  "휘어지는 눈매가 끔찍하리만치 느리게 눈에 들어온다.<br>...전부 꿈일까? 고작 순간일 뿐인데 그게 꼭 영원 같더라.",
+  "애송이와는 별개로 귀엽다고는 생각해요.<br>...오해하지 말아요. 별개에요.",
+  "할 수 있어요. 긴장하지 말아요."
+];
+let tmiI = 0;
+const lever = document.getElementById("lever"), tmiText = document.getElementById("tmiText");
+lever.addEventListener("click", () => {
+  lever.classList.add("down");
+  const n = tmiI % tmis.length;
+  tmiText.innerHTML = `<small>TMI ${String(n+1).padStart(2,"0")}</small>${tmis[n]}`;
+  tmiI++;
+  setTimeout(() => lever.classList.remove("down"), 450);
+});
+
+/* ===== 잠긴 일기 ===== */
+const ANSWER = "1224";
+const lockForm = document.getElementById("lockForm"), lockMsg = document.getElementById("lockMsg"), diary = document.getElementById("diaryList");
+lockForm.addEventListener("submit", e => {
+  e.preventDefault();
+  const v = document.getElementById("pw").value.replace(/\s/g,"");
+  if(v === ANSWER){
+    diary.classList.remove("sealed");
+    lockMsg.textContent = "...라피스, 뭐하고 있었어요?";
+  } else if(!v){
+    lockMsg.textContent = "비밀번호를 입력해 주세요.";
+  } else {
+    lockMsg.textContent = "언약 기념일. 생각해봐요.";
+  }
+});
+document.getElementById("hintBtn").addEventListener("click", () => {
+  const h = document.getElementById("hint"); h.hidden = !h.hidden;
+});
+
+/* ===== 비교 슬라이더 ===== */
+(function(){
+  const box = document.getElementById("cmp"), front = document.getElementById("cmpFront"), handle = document.getElementById("cmpHandle");
+  let pos = 50, drag = false;
+  function set(p){
+    pos = Math.max(0, Math.min(100, p));
+    front.style.clipPath = `inset(0 ${100-pos}% 0 0)`;
+    handle.style.left = pos + "%";
+    handle.setAttribute("aria-valuenow", Math.round(pos));
+  }
+  function fromEvent(e){ const r = box.getBoundingClientRect(); set((e.clientX - r.left)/r.width*100); }
+  box.addEventListener("pointerdown", e => { drag = true; box.setPointerCapture(e.pointerId); fromEvent(e); });
+  box.addEventListener("pointermove", e => { if(drag) fromEvent(e); });
+  box.addEventListener("pointerup", () => drag = false);
+  box.addEventListener("pointercancel", () => drag = false);
+  handle.addEventListener("keydown", e => {
+    if(e.key === "ArrowLeft"){ set(pos-5); e.preventDefault(); }
+    if(e.key === "ArrowRight"){ set(pos+5); e.preventDefault(); }
+  });
+  set(50);
+})();
+
+/* ===== 키 재기 사진 ===== */
+(function(){
+  const figs = document.getElementById("figs"), gap = document.getElementById("gapLine");
+  figs.style.height = Math.max(300, CONFIG.lapisHeight + 80) + "px";
+  gap.style.bottom = CONFIG.yshHeight + "px";
+  function slot(id, src, h, inputId){
+    const el = document.getElementById(id), img = el.querySelector("img");
+    el.style.setProperty("--h", h + "px");
+    img.addEventListener("load", () => { img.hidden = false; el.classList.add("has-img"); });
+    img.addEventListener("error", () => { img.hidden = true; el.classList.remove("has-img"); });
+    if(src) img.src = src;
+    document.getElementById(inputId).addEventListener("change", e => {
+      const f = e.target.files && e.target.files[0];
+      if(f) img.src = URL.createObjectURL(f);
+    });
+  }
+  slot("slotLapis", CONFIG.lapisImg, CONFIG.lapisHeight, "upLapis");
+  slot("slotYsh", CONFIG.yshImg, CONFIG.yshHeight, "upYsh");
+})();
+
+/* ===== 링크펄 폰 ===== */
+(function(){
+  const now = new Date();
+  document.getElementById("phoneTime").textContent = `${now.getHours()}:${String(now.getMinutes()).padStart(2,"0")}`;
+  document.getElementById("lockScreen").addEventListener("click", () => document.getElementById("phone").classList.add("open"));
+})();
+
+/* ===== 아카이브 플립 ===== */
+document.querySelectorAll(".flip").forEach(b => b.addEventListener("click", () => b.classList.toggle("on")));
+
+/* ===== 응원 ===== */
+(function(){
+  const btn = document.getElementById("heartBtn"), cnt = document.getElementById("heartCount"), msg = document.getElementById("heartMsg");
+  let n = store.get("st-hearts", 0);
+  const steps = [[0,"0m 전진"],[10,"10m 전진"],[30,"30m 전진"],[60,"60m 전진"],[100,"슈톨라: \"인기 많네요?\" 라피스: \"…시끄러워요.\""]];
+  function show(){ cnt.textContent = n; btn.textContent = n ? "♥" : "♡"; msg.textContent = steps.filter(s => n >= s[0]).pop()[1]; }
+  btn.addEventListener("click", () => { n++; store.set("st-hearts", n); show(); });
+  show();
+
+  /* --- 응원 메시지: Supabase가 설정돼 있으면 모두에게 공유, 아니면 이 브라우저에만 --- */
+  const list = document.getElementById("notes"), form = document.getElementById("noteForm"),
+        input = document.getElementById("noteIn"), nameIn = document.getElementById("nameIn"),
+        status = document.getElementById("noteStatus");
+  const shared = !!(CONFIG.SUPABASE_URL && CONFIG.SUPABASE_KEY);
+  const API = CONFIG.SUPABASE_URL.replace(/\/$/, "") + "/rest/v1/cheers";
+  const HEAD = { apikey: CONFIG.SUPABASE_KEY, "Content-Type": "application/json" };
+  const COOLDOWN = 30; // 초. 같은 사람이 연달아 도배하지 못하게
+
+  nameIn.value = store.get("st-name", "");
+
+  function fmt(iso){ const d = new Date(iso); return `${d.getMonth()+1}.${d.getDate()} ${d.getHours()}:${String(d.getMinutes()).padStart(2,"0")}`; }
+  function renderNotes(rows){
+    list.innerHTML = "";
+    if(!rows.length){ const li = document.createElement("li"); li.textContent = "아직 아무도 남기지 않았어요. 첫 한마디를 남겨 주세요."; list.append(li); return; }
+    rows.forEach(o => {
+      const li = document.createElement("li");
+      const sm = document.createElement("small"); sm.textContent = `${o.name || "익명"} · ${fmt(o.created_at)}`;
+      li.append(sm, document.createTextNode(o.message));
+      list.append(li);
+    });
+  }
+  async function load(){
+    if(!shared){ renderNotes(store.get("st-notes2", []).slice().reverse()); return; }
+    try{
+      const r = await fetch(`${API}?select=name,message,created_at&order=created_at.desc&limit=100`, { headers: HEAD });
+      if(!r.ok) throw new Error(r.status);
+      renderNotes(await r.json()); status.textContent = "";
+    }catch(e){ status.textContent = "메시지를 불러오지 못했어요. 잠시 후 새로고침해 주세요."; }
+  }
+  form.addEventListener("submit", async e => {
+    e.preventDefault();
+    const message = input.value.trim(), name = nameIn.value.trim().slice(0,12) || "익명";
+    if(!message){ status.textContent = "한마디를 입력해 주세요."; return; }
+    const last = store.get("st-last", 0), wait = COOLDOWN - Math.floor((Date.now() - last)/1000);
+    if(wait > 0){ status.textContent = `${wait}초 뒤에 다시 남길 수 있어요.`; return; }
+    store.set("st-name", nameIn.value.trim());
+    if(!shared){
+      const arr = store.get("st-notes2", []); arr.push({ name, message, created_at: new Date().toISOString() });
+      store.set("st-notes2", arr); store.set("st-last", Date.now()); input.value = ""; load(); return;
+    }
+    status.textContent = "남기는 중…";
+    try{
+      const r = await fetch(API, { method: "POST", headers: { ...HEAD, Prefer: "return=minimal" }, body: JSON.stringify({ name, message: message.slice(0,80) }) });
+      if(!r.ok) throw new Error(r.status);
+      store.set("st-last", Date.now()); input.value = ""; status.textContent = "남겼어요!"; load();
+    }catch(e){ status.textContent = "남기지 못했어요. 잠시 후 다시 시도해 주세요."; }
+  });
+  load();
+})();
+</script>
+</body>
+</html>
